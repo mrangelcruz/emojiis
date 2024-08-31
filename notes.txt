@@ -1,0 +1,22 @@
+go test -v .
+- - - 
+go doc -all ./search
+- - - 
+import path:
+go list ./search
+- - - 
+go run .
+curl -d '{"include":["fruit"]}' http://127.0.0.1:8080/
+search
+- - - 
+go work init ./emojiis ./emoserv 
+- - - 
+go work edit -dropuse ./emojiis 
+- - - 
+go work use ./emojiis
+- - - 
+git mod edit -module github.com/mrangelcruz/emojiis
+- - - 
+- - - 
+- - - 
+- - - 
