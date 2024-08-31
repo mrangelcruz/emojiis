@@ -6,8 +6,7 @@ import path:
 go list ./search
 - - - 
 go run .
-curl -d '{"include":["fruit"]}' http://127.0.0.1:8080/
-search
+curl -d '{"include":["fruit"]}' http://127.0.0.1:8080/search
 - - - 
 go work init ./emojiis ./emoserv 
 - - - 
@@ -17,6 +16,10 @@ go work use ./emojiis
 - - - 
 git mod edit -module github.com/mrangelcruz/emojiis
 - - - 
+go work edit -dropuse ./emojiis
 - - - 
+git mod tidy
+- - - 
+got get github.com/mrangelcruz/emojiis@v0.1.0
 - - - 
 - - - 
